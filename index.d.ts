@@ -48,7 +48,7 @@ export declare function isEmptyObject(obj: object): boolean
 export declare function roundToTwo(num: number): number
 export declare function findMax(arr: number[]): number
 export declare function findMin(arr: number[]): number
-export declare function removeDuplicates<T>(arr: Array<T>): Array<T>
+export declare function removeDuplicates<T>(arr: T[]): T[]
 export declare function capitalizeWords(str: string): string
 
 // Validators

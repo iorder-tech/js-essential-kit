@@ -228,7 +228,7 @@ export function generateTimeSlots(): {
 
     times.push({
       index: i / 2,
-      key: key,
+      key,
       value: 0,
     })
   }
@@ -334,7 +334,7 @@ export function findMin(arr: number[]): number {
  * @param {Array} arr - The input array.
  * @returns {Array} - The array with duplicates removed.
  */
-export function removeDuplicates<T>(arr: Array<T>): Array<T> {
+export function removeDuplicates<T>(arr: T[]): T[] {
   return [...new Set(arr)]
 }
 
