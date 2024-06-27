@@ -13,8 +13,8 @@
     "build": "rm -rf dist && tsc",
     "prepare": "rm -rf dist && npm run build",
     "test": "jest",
-    "lint": "eslint --fix .",
-    "lint:check": "eslint .",
+    "lint": "eslint --fix . --ignore-pattern dist/",
+    "lint:check": "eslint . --ignore-pattern dist/",
     "lint:format": "prettier --write .",
     "lint:format:check": "prettier --check .",
     "coverage": "jest --watchAll --coverage"
