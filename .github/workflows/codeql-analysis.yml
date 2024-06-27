@@ -18,6 +18,11 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - name: Set up GitHub token
+        run: echo "GITHUB_TOKEN=${{ secrets.GIT_TOKEN }}" >> $GITHUB_ENV
 
       - name: Initialize CodeQL
         uses: github/codeql-action/init@v3
@@ -29,6 +34,8 @@ jobs:
 
       - name: Perform CodeQL Analysis
         uses: github/codeql-action/analyze@v3
+        with:
+          token: ${{ secrets.GIT_TOKEN }}
 
       - name: Upload coverage reports to Codecov
         uses: codecov/codecov-action@v4.0.1
