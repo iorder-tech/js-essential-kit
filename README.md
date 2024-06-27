@@ -16,19 +16,19 @@ Welcome to the Utility JavaScript Functions Library! This library provides a com
 if using npm:
 
 ```
-$ npm install js-helper-kit --save
+$ npm install js-essential-kit --save
 ```
 
 if using yarn:
 
 ```
-$ yarn add js-helper-kit
+$ yarn add js-essential-kit
 ```
 
 if using pnpm:
 
 ```
-$ pnpm install js-helper-kit
+$ pnpm install js-essential-kit
 ```
 
 ## Dates
@@ -38,7 +38,7 @@ $ pnpm install js-helper-kit
 - Calculates the age based on the given birth date.
 
 ```js
-import { calculateAge } from 'js-helper-kit'
+import { calculateAge } from 'js-essential-kit'
 
 calculateAge('2000-01-01') // Ex: 23 anos
 ```
@@ -48,7 +48,7 @@ calculateAge('2000-01-01') // Ex: 23 anos
 - Converts a date string to a different format.
 
 ```js
-import { convertDateFormat } from 'js-helper-kit'
+import { convertDateFormat } from 'js-essential-kit'
 
 convertDateFormat('2024-06-26') // Ex: '26/06/2024'
 convertDateFormat('26/06/2024') // Ex: '2024-06-26'
@@ -63,7 +63,7 @@ convertDateFormat('26/06/2024') // Ex: '2024-06-26'
 - Formats a number or string as Brazilian Real currency.
 
 ```js
-import { formatReal } from 'js-helper-kit'
+import { formatReal } from 'js-essential-kit'
 
 formatReal(1234.56) // Ex: 'R$ 1.234,56'
 ```
@@ -73,7 +73,7 @@ formatReal(1234.56) // Ex: 'R$ 1.234,56'
 - Rounds a number to the nearest integer.
 
 ```js
-import { formatRound } from 'js-helper-kit'
+import { formatRound } from 'js-essential-kit'
 
 formatRound(4.567) // Ex: 5
 ```
@@ -83,7 +83,7 @@ formatRound(4.567) // Ex: 5
 - Formats a number to two decimal places.
 
 ```js
-import { formatDecimal } from 'js-helper-kit'
+import { formatDecimal } from 'js-essential-kit'
 
 formatDecimal(1234.56) // Ex: '1234,56'
 ```
@@ -95,7 +95,7 @@ formatDecimal(1234.56) // Ex: '1234,56'
 - Applies CPF or CNPJ mask to a string.
 
 ```js
-import { cpfOrCnpjMask } from 'js-helper-kit'
+import { cpfOrCnpjMask } from 'js-essential-kit'
 
 cpfOrCnpjMask('12345678909')) // Ex CPF: '123.456.789-09'
 cpfOrCnpjMask('68451802000151')) // EX CNPJ: '68.451.802/0001-51'
@@ -106,7 +106,7 @@ cpfOrCnpjMask('68451802000151')) // EX CNPJ: '68.451.802/0001-51'
 - Applies Brazilian zipcode mask to a string.
 
 ```js
-import { brazilianZipcodeMask } from 'js-helper-kit'
+import { brazilianZipcodeMask } from 'js-essential-kit'
 
 brazilianZipcodeMask('12345678') // Ex: '12345-678'
 ```
@@ -116,7 +116,7 @@ brazilianZipcodeMask('12345678') // Ex: '12345-678'
 - Applies Brazilian telephone mask to a string.
 
 ```js
-import { brazilianTelephoneMask } from 'js-helper-kit'
+import { brazilianTelephoneMask } from 'js-essential-kit'
 
 brazilianTelephoneMask('21987654321') // Ex: '(21) 98765-4321'
 ```
@@ -126,7 +126,7 @@ brazilianTelephoneMask('21987654321') // Ex: '(21) 98765-4321'
 - Applies a global cellphone mask based on country.
 
 ```js
-import { globalCellphoneMask } from 'js-helper-kit'
+import { globalCellphoneMask } from 'js-essential-kit'
 
 globalCellphoneMask('US', '1234567890') // Ex: '+1 (123) 456-7890'
 ```
@@ -136,7 +136,7 @@ globalCellphoneMask('US', '1234567890') // Ex: '+1 (123) 456-7890'
 - Clears any mask from a string.
 
 ```js
-import { clearMask } from 'js-helper-kit'
+import { clearMask } from 'js-essential-kit'
 
 clearMask('123.456.789-09')) // Ex: '12345678909'
 ```
@@ -148,7 +148,7 @@ clearMask('123.456.789-09')) // Ex: '12345678909'
 - Normalizes a name string.
 
 ```js
-import { normalizeName } from 'js-helper-kit'
+import { normalizeName } from 'js-essential-kit'
 
 normalizeName(' João da Silva ') // Ex: 'João Da Silva'
 ```
@@ -158,7 +158,7 @@ normalizeName(' João da Silva ') // Ex: 'João Da Silva'
 - Converts an array of strings to a single string with each item in quotes.
 
 ```js
-import { arrayToStringWithQuotes } from 'js-helper-kit'
+import { arrayToStringWithQuotes } from 'js-essential-kit'
 
 arrayToStringWithQuotes(['apple', 'banana', 'cherry']) // Ex: '"apple", "banana", "cherry"'
 ```
@@ -170,7 +170,7 @@ arrayToStringWithQuotes(['apple', 'banana', 'cherry']) // Ex: '"apple", "banana"
 - Encodes a string in base64.
 
 ```js
-import { base64Encoding } from 'js-helper-kit'
+import { base64Encoding } from 'js-essential-kit'
 
 base64Encoding('Hello, World!') // Ex: 'SGVsbG8sIFdvcmxkIQ=='
 ```
@@ -180,7 +180,7 @@ base64Encoding('Hello, World!') // Ex: 'SGVsbG8sIFdvcmxkIQ=='
 - Decodes a base64 string.
 
 ```js
-import { base64Decoding } from 'js-helper-kit'
+import { base64Decoding } from 'js-essential-kit'
 
 base64Decoding('SGVsbG8sIFdvcmxkIQ==') // Ex: 'Hello, World!'
 ```
@@ -190,7 +190,7 @@ base64Decoding('SGVsbG8sIFdvcmxkIQ==') // Ex: 'Hello, World!'
 - Generates a random number between min and max.
 
 ```js
-import { generateRandomNumber } from 'js-helper-kit'
+import { generateRandomNumber } from 'js-essential-kit'
 
 generateRandomNumber(1, 10) // Ex: 7
 ```
@@ -200,7 +200,7 @@ generateRandomNumber(1, 10) // Ex: 7
 - Generates a random string of specified length.
 
 ```js
-import { generateRandomString } from 'js-helper-kit'
+import { generateRandomString } from 'js-essential-kit'
 
 generateRandomString(5, 10) // Ex: 'aBcDeF'
 ```
@@ -210,7 +210,7 @@ generateRandomString(5, 10) // Ex: 'aBcDeF'
 - Generates an array of numbers from 0 to quantity-1.
 
 ```js
-import { generateRange } from 'js-helper-kit'
+import { generateRange } from 'js-essential-kit'
 
 generateRange(5) // Ex: [1, 2, 3, 4, 5]
 ```
@@ -220,7 +220,7 @@ generateRange(5) // Ex: [1, 2, 3, 4, 5]
 - Creates a URL-friendly slug from a string.
 
 ```js
-import { createSlug } from 'js-helper-kit'
+import { createSlug } from 'js-essential-kit'
 
 createSlug('Olá Mundo!') // 'ola-mundo'
 ```
@@ -230,7 +230,7 @@ createSlug('Olá Mundo!') // 'ola-mundo'
 - Limits the length of a string, optionally adding ellipsis.
 
 ```js
-import { limitString } from 'js-helper-kit'
+import { limitString } from 'js-essential-kit'
 
 // Limits a string to the specified length, optionally adding an ellipsis.
 limitString('Hello World', 10, true)) // Ex: 'Hello W...'
@@ -241,7 +241,7 @@ limitString('Hello World', 10, true)) // Ex: 'Hello W...'
 - Finds the lowest value in an option group.
 
 ```js
-import { findLowestValue } from 'js-helper-kit'
+import { findLowestValue } from 'js-essential-kit'
 
 const options = {
   options: [{ value: '10' }, { value: '5' }, { value: '20' }],
@@ -255,7 +255,7 @@ findLowestValue(options) // Ex: { value: '5' }
 - Generates a set of time slots.
 
 ```js
-import { generateTimeSlots } from 'js-helper-kit'
+import { generateTimeSlots } from 'js-essential-kit'
 
 generateTimeSlots()
 
@@ -272,7 +272,7 @@ generateTimeSlots()
 - Splits a full name into first and last name.
 
 ```js
-import { createFirstAndLastName } from 'js-helper-kit'
+import { createFirstAndLastName } from 'js-essential-kit'
 
 createFirstAndLastName('John Michael Doe') // Ex: 'John Michael'
 ```
@@ -282,7 +282,7 @@ createFirstAndLastName('John Michael Doe') // Ex: 'John Michael'
 - Calculates the distance in kilometers.
 
 ```js
-import { calculateDistanceInKm } from 'js-helper-kit'
+import { calculateDistanceInKm } from 'js-essential-kit'
 
 calculateDistanceInKm(1500) // Ex: 1.5
 ```
@@ -292,7 +292,7 @@ calculateDistanceInKm(1500) // Ex: 1.5
 - Checks if an object is empty.
 
 ```js
-import { isEmptyObject } from 'js-helper-kit'
+import { isEmptyObject } from 'js-essential-kit'
 
 isEmptyObject({}) // Ex: true
 ```
@@ -302,7 +302,7 @@ isEmptyObject({}) // Ex: true
 - Rounds a number to two decimal places.
 
 ```js
-import { roundToTwo } from 'js-helper-kit'
+import { roundToTwo } from 'js-essential-kit'
 
 roundToTwo(123.456) // Ex: 123.46
 ```
@@ -312,7 +312,7 @@ roundToTwo(123.456) // Ex: 123.46
 - Finds the maximum value in an array.
 
 ```js
-import { findMax } from 'js-helper-kit'
+import { findMax } from 'js-essential-kit'
 
 findMax([1, 2, 3, 4, 5]) // Ex: 5
 ```
@@ -322,7 +322,7 @@ findMax([1, 2, 3, 4, 5]) // Ex: 5
 - Finds the minimum value in an array.
 
 ```js
-import { findMin } from 'js-helper-kit'
+import { findMin } from 'js-essential-kit'
 
 findMin([1, 2, 3, 4, 5]) // Ex: 1
 ```
@@ -332,7 +332,7 @@ findMin([1, 2, 3, 4, 5]) // Ex: 1
 - Removes duplicate values from an array.
 
 ```js
-import { removeDuplicates } from 'js-helper-kit'
+import { removeDuplicates } from 'js-essential-kit'
 
 removeDuplicates([1, 2, 2, 3, 4, 4, 5]) // Ex: [1, 2, 3, 4, 5]
 ```
@@ -342,7 +342,7 @@ removeDuplicates([1, 2, 2, 3, 4, 4, 5]) // Ex: [1, 2, 3, 4, 5]
 - Capitalizes the first letter of each word in a string.
 
 ```js
-import { capitalizeWords } from 'js-helper-kit'
+import { capitalizeWords } from 'js-essential-kit'
 
 capitalizeWords('hello world') // Ex: 'Hello World'
 ```
@@ -354,7 +354,7 @@ capitalizeWords('hello world') // Ex: 'Hello World'
 - Validates a Brazilian CPF.
 
 ```js
-import { brazilianCpfValidator } from 'js-helper-kit'
+import { brazilianCpfValidator } from 'js-essential-kit'
 
 brazilianCpfValidator('123.456.789-09') // Ex: true ou false
 ```
@@ -364,7 +364,7 @@ brazilianCpfValidator('123.456.789-09') // Ex: true ou false
 - Validates a Brazilian CNPJ.
 
 ```js
-import { brazilianCnpjValidator } from 'js-helper-kit'
+import { brazilianCnpjValidator } from 'js-essential-kit'
 
 brazilianCnpjValidator('12.345.678/0001-95') // Ex: true ou false
 ```
@@ -374,7 +374,7 @@ brazilianCnpjValidator('12.345.678/0001-95') // Ex: true ou false
 - Validates an email address.
 
 ```js
-import { emailIsValid } from 'js-helper-kit'
+import { emailIsValid } from 'js-essential-kit'
 
 emailIsValid('example@example.com') // Ex: true ou false
 ```
@@ -384,7 +384,7 @@ emailIsValid('example@example.com') // Ex: true ou false
 - Validates a name string.
 
 ```js
-import { nameIsValid } from 'js-helper-kit'
+import { nameIsValid } from 'js-essential-kit'
 
 nameIsValid('John Doe') // Ex: true ou false
 ```
@@ -394,7 +394,7 @@ nameIsValid('John Doe') // Ex: true ou false
 - Validates a full name string.
 
 ```js
-import { fullnameIsValid } from 'js-helper-kit'
+import { fullnameIsValid } from 'js-essential-kit'
 
 fullnameIsValid('John Doe') // Ex: { valid: true, message: '' }
 fullnameIsValid('John  Doe') // Ex: { valid: false, message: 'No extra spaces allowed' }
@@ -405,7 +405,7 @@ fullnameIsValid('John  Doe') // Ex: { valid: false, message: 'No extra spaces al
 - Validates a name with last name.
 
 ```js
-import { validNameAndLastName } from 'js-helper-kit'
+import { validNameAndLastName } from 'js-essential-kit'
 
 validNameAndLastName('John Doe') // Ex: true ou false
 ```
@@ -415,7 +415,7 @@ validNameAndLastName('John Doe') // Ex: true ou false
 - Validates a Brazilian telephone number.
 
 ```js
-import { brazilianTelephoneValidator } from 'js-helper-kit'
+import { brazilianTelephoneValidator } from 'js-essential-kit'
 
 brazilianTelephoneValidator('(21) 98765-4321') // Ex: true ou false
 ```
@@ -425,7 +425,7 @@ brazilianTelephoneValidator('(21) 98765-4321') // Ex: true ou false
 - Checks if the birthdate is 18 years or older, with an option to allow minors.
 
 ```js
-import { birthdateIs18Plus } from 'js-helper-kit'
+import { birthdateIs18Plus } from 'js-essential-kit'
 
 birthdateIs18Plus('2000-01-01', false)) // Ex: true ou false
 ```
@@ -435,7 +435,7 @@ birthdateIs18Plus('2000-01-01', false)) // Ex: true ou false
 - Validates the strength of a password.
 
 ```js
-import { passwordStrongValidator } from 'js-helper-kit'
+import { passwordStrongValidator } from 'js-essential-kit'
 
 passwordStrongValidator('StrongP@ssword1')
 // Ex: { passwordIsValid: true }
