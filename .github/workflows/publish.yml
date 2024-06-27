@@ -13,6 +13,8 @@ jobs:
       - uses: actions/checkout@v4
         with:
           ref: develop
+          persist-credentials: false
+          token: ${{ secrets.GIT_TOKEN }}
 
       # Setup .npmrc file to publish to npm
       - uses: actions/setup-node@v4
@@ -32,7 +34,12 @@ jobs:
       - run: yarn install --frozen-lockfile
       - run: yarn build
       - run: npm version ${{ github.event.inputs.version }} -m "Release ${{ github.event.inputs.version }} 📣"
-      - run: git push
+      - run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git push
+        env:
+          GH_TOKEN: ${{ secrets.GIT_TOKEN }}
 
       # Publish to npm
       - run: npm publish --access public
@@ -47,8 +54,7 @@ jobs:
           scope: '@jamesives'
 
       - name: Authenticate with the GitHub Package Registry
-        run: echo "//npm.pkg.github.com:_authToken=${{ secrets.GIT_TOKEN }}" >
-          ~/.npmrc
+        run: echo "//npm.pkg.github.com:_authToken=${{ secrets.GIT_TOKEN }}" > ~/.npmrc
 
       # Publish to GitHub Packages
       - run: npm publish
