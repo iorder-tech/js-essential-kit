@@ -25,8 +25,8 @@ jobs:
 
       - name: Configure Git
         run: |
-          git config user.email "${{ secrets.GIT_CONFIG_EMAIL }}"
-          git config user.name "${{ secrets.GIT_CONFIG_NAME }}"
+          git config user.email "julioams@icloud.com"
+          git config user.name "Julio Sousa"
 
       - name: Install Yarn
         run: npm install -g yarn
