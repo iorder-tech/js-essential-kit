@@ -1,8 +1,5 @@
 {
-  "plugins": [
-    "jest",
-    "@typescript-eslint"
-  ],
+  "plugins": ["jest", "@typescript-eslint"],
   "extends": [
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
@@ -22,9 +19,7 @@
     "es6": true,
     "jest/globals": true
   },
-  "ignorePatterns": [
-    "dist/"
-  ],
+  "ignorePatterns": ["dist/"],
   "rules": {
     "@typescript-eslint/ban-types": [
       "error",
@@ -67,10 +62,7 @@
     "@typescript-eslint/no-explicit-any": "off",
     "@typescript-eslint/no-unused-vars": "error",
     "@typescript-eslint/explicit-function-return-type": "error",
-    "object-shorthand": [
-      "error",
-      "always"
-    ],
+    "object-shorthand": ["error", "always"],
     "prefer-destructuring": [
       "error",
       {
@@ -84,10 +76,7 @@
     "no-console": [
       "error",
       {
-        "allow": [
-          "warn",
-          "error"
-        ]
+        "allow": ["warn", "error"]
       }
     ],
     "no-alert": "error",
