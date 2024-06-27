@@ -1,0 +1,70 @@
+{
+  "name": "js-helper-kit",
+  "version": "1.0.0",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "license": "Apache-2.0",
+  "engines": {
+    "node": ">=16"
+  },
+  "scripts": {
+    "build": "tsc",
+    "prepare": "rm -rf dist && npm run build",
+    "test": "jest",
+    "coverage": "jest --watchAll --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iorder-tech/js-helper-kit.git"
+  },
+  "bugs": {
+    "url": "https://github.com/iorder-tech/js-helper-kit/issues"
+  },
+  "keywords": [
+    "react-native",
+    "react",
+    "javascript",
+    "typescript",
+    "mobile",
+    "ios",
+    "android",
+    "functions",
+    "validations",
+    "mask",
+    "cpf-mask",
+    "cnpj-mask",
+    "telephone-mask",
+    "cep-mask"
+  ],
+  "author": "Julio Augusto <julio@iorder.com.br>",
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^7.14.1",
+    "buffer": "^6.0.3",
+    "diacritic": "^0.0.2"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.5.0",
+    "@types/jest": "^29.5.12",
+    "@types/mocha": "^10.0.7",
+    "eslint": "9.x",
+    "globals": "^15.6.0",
+    "husky": "^9.0.11",
+    "jest": "^29.7.0",
+    "lint-staged": "^15.2.7",
+    "prettier": "^3.3.2",
+    "ts-jest": "^29.1.5",
+    "typescript": "^5.5.2",
+    "typescript-eslint": "^7.14.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{ts}": [
+      "eslint --fix",
+      "prettier --write"
+    ]
+  }
+}
