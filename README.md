@@ -46,7 +46,7 @@ calculateAge('2000-01-01') // Ex: 23 anos
 ### Convert Date Format
 
 - Converts a date string to a different format.
- 
+
 ```js
 import { convertDateFormat } from 'js-helper-kit'
 
@@ -57,6 +57,7 @@ convertDateFormat('26/06/2024') // Ex: '2024-06-26'
 ## Formats
 
 ### Format Real
+
 - **`formatReal(amount: number | string): string`**
 
 - Formats a number or string as Brazilian Real currency.
@@ -243,11 +244,7 @@ limitString('Hello World', 10, true)) // Ex: 'Hello W...'
 import { findLowestValue } from 'js-helper-kit'
 
 const options = {
-  options: [
-    { value: '10' },
-    { value: '5' },
-    { value: '20' }
-  ]
+  options: [{ value: '10' }, { value: '5' }, { value: '20' }],
 }
 
 findLowestValue(options) // Ex: { value: '5' }
@@ -468,8 +465,8 @@ Feel free to contribute to this project or suggest new features. Happy coding! ð
 
 ### Contributors
 
-| [<img src="https://avatars0.githubusercontent.com/u/39813875?s=460&v=4" width=115 > <br> <sub> Julio Sousa </sub>](https://github.com/JulioAugustoS) | 
-| :---: |
+| [<img src="https://avatars0.githubusercontent.com/u/39813875?s=460&v=4" width=115 > <br> <sub> Julio Sousa </sub>](https://github.com/JulioAugustoS) |
+| :--------------------------------------------------------------------------------------------------------------------------------------------------: |
 
 ---
 

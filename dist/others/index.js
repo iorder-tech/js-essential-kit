@@ -18,7 +18,7 @@ exports.findMin = findMin;
 exports.removeDuplicates = removeDuplicates;
 exports.capitalizeWords = capitalizeWords;
 const buffer_1 = require("buffer");
-const diacritic_1 = require("diacritic");
+const diacritic = require("diacritic");
 /**
  * Encodes a string to Base64.
  *
@@ -119,7 +119,7 @@ function generateRange(quantity) {
  * console.log(createSlug('Olá Mundo!')); // 'ola-mundo'
  */
 function createSlug(name) {
-    let slug = diacritic_1.default.clean(name); // Remove diacritics
+    let slug = diacritic.clean(name); // Remove diacritics
     slug = slug.toLowerCase(); // Convert to lowercase
     slug = slug.replace(/[^\w\s-]/g, ''); // Remove non-word characters except spaces and hyphens
     slug = slug.replace(/\s+/g, '-'); // Replace spaces with hyphens
@@ -149,7 +149,9 @@ function limitString(text, limit, addEllipsis = false) {
     if (text.length <= limit) {
         return text;
     }
-    const truncatedText = text.slice(0, limit);
+    const truncatedText = addEllipsis
+        ? text.slice(0, limit - 3)
+        : text.slice(0, limit);
     return addEllipsis ? truncatedText + '...' : truncatedText;
 }
 /**

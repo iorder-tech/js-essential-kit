@@ -1,16 +1,22 @@
 {
   "name": "js-helper-kit",
+  "description": "This library provides a comprehensive set of utility functions for various common tasks, including date calculations, formatting, masking, normalizing data, and validation",
   "version": "1.0.0",
-  "main": "./dist/index.js",
-  "types": "./dist/index.d.ts",
-  "license": "Apache-2.0",
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
+  "root": true,
+  "license": "MIT",
   "engines": {
     "node": ">=16"
   },
   "scripts": {
-    "build": "tsc",
+    "build": "rm -rf dist && tsc",
     "prepare": "rm -rf dist && npm run build",
     "test": "jest",
+    "lint": "eslint --fix .",
+    "lint:check": "eslint .",
+    "lint:format": "prettier --write .",
+    "lint:format:check": "prettier --check .",
     "coverage": "jest --watchAll --coverage"
   },
   "repository": {

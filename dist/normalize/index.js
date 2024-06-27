@@ -2,6 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.normalizeName = normalizeName;
 exports.arrayToStringWithQuotes = arrayToStringWithQuotes;
+exports.normalizeString = normalizeString;
 /**
  * Normalizes a name by capitalizing the first letter of each word.
  *
@@ -43,4 +44,7 @@ function normalizeName(name) {
  */
 function arrayToStringWithQuotes(items) {
     return items.map((item) => `"${item}"`).join(', ');
+}
+function normalizeString(str) {
+    return str.replace(/\u00a0/g, ' ').normalize('NFKC');
 }

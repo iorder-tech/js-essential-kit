@@ -1,4 +1,4 @@
-import { normalizeString } from '../lib'
+import { normalizeString } from '../lib/normalize'
 import { formatReal, formatRound, formatDecimal } from '../lib/formats'
 
 describe('formatReal', () => {

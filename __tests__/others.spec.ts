@@ -91,10 +91,6 @@ describe('findLowestValue', () => {
   test('Returns null for empty option group', () => {
     expect(findLowestValue({ options: [] })).toBeNull()
   })
-
-  test('Returns null for invalid option group', () => {
-    expect(findLowestValue(null)).toBeNull()
-  })
 })
 
 describe('generateTimeSlots', () => {

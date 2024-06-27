@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.globalCellphoneMask = void 0;
 exports.cpfOrCnpjMask = cpfOrCnpjMask;
 exports.brazilianZipcodeMask = brazilianZipcodeMask;
-exports.brasilianTelephoneMask = brasilianTelephoneMask;
+exports.brazilianTelephoneMask = brazilianTelephoneMask;
 exports.clearMask = clearMask;
 const countries_1 = require("../utils/countries");
 /**
@@ -71,7 +71,7 @@ function brazilianZipcodeMask(value) {
  * // Apply telephone mask to 9-digit number
  * console.log(telephoneMask('11987654321')); // '(11) 98765-4321'
  */
-function brasilianTelephoneMask(value) {
+function brazilianTelephoneMask(value) {
     value = value.replace(/\D/g, '');
     if (value.length <= 10) {
         value = value.replace(/^(\d{2})(\d{4})(\d{4})$/, '($1) $2-$3');
