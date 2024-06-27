@@ -12,7 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: dev
+          ref: develop
 
       # Setup .npmrc file to publish to npm
       - uses: actions/setup-node@v4
