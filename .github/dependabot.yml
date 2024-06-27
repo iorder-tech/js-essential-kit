@@ -1,0 +1,40 @@
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: '/'
+    schedule:
+      interval: daily
+      time: '10:00'
+    open-pull-requests-limit: 10
+    groups:
+      eslint:
+        patterns:
+          - 'eslint-*'
+          - '@typescript-eslint/*'
+          - '@eslint/*'
+
+      typescript:
+        patterns:
+          - 'typescript-*'
+          - '@typescript/*'
+
+      jest:
+        patterns:
+          - 'jest-*'
+          - '@jest/*'
+
+      actions:
+        patterns:
+          - 'actions/*'
+          - '@actions/*'
+
+      misc:
+        patterns:
+          - '*'
+
+  - package-ecosystem: github-actions
+    directory: '/'
+    schedule:
+      interval: daily
+      time: '10:00'
+    open-pull-requests-limit: 10
