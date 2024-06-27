@@ -14,7 +14,6 @@ jobs:
         with:
           ref: develop
           persist-credentials: false
-          token: ${{ secrets.GIT_TOKEN }}
 
       # Setup .npmrc file to publish to npm
       - uses: actions/setup-node@v4
@@ -25,8 +24,8 @@ jobs:
 
       - name: Configure Git
         run: |
-          git config user.email "julioams@icloud.com"
-          git config user.name "Julio Sousa"
+          git config user.email "${{ secrets.GIT_CONFIG_EMAIL }}"
+          git config user.name "${{ secrets.GIT_CONFIG_NAME }}"
 
       - name: Install Yarn
         run: npm install -g yarn
@@ -37,9 +36,8 @@ jobs:
       - run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git remote set-url origin https://x-access-token:${{ secrets.GIT_TOKEN }}@github.com/iorder-tech/js-helper-kit.git
           git push
-        env:
-          GH_TOKEN: ${{ secrets.GIT_TOKEN }}
 
       # Publish to npm
       - run: npm publish --access public
