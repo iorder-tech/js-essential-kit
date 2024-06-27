@@ -49,7 +49,7 @@ jobs:
         with:
           node-version-file: '.nvmrc'
           registry-url: 'https://npm.pkg.github.com'
-          scope: '@jamesives'
+          scope: '@julioamsousa'
 
       - name: Authenticate with the GitHub Package Registry
         run: echo "//npm.pkg.github.com:_authToken=${{ secrets.GIT_TOKEN }}" > ~/.npmrc
