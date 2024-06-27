@@ -1,7 +1,7 @@
 {
   "name": "js-helper-kit",
   "description": "This library provides a comprehensive set of utility functions for various common tasks, including date calculations, formatting, masking, normalizing data, and validation",
-  "version": "1.0.12",
+  "version": "1.0.13",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "root": true,
