@@ -13,7 +13,7 @@ export declare function formatDecimal(value: number): string
 // Masks
 export declare function cpfOrCnpjMask(value: string): string
 export declare function brazilianZipcodeMask(value: string): string
-export declare function brasilianTelephoneMask(value: string): string
+export declare function brazilianTelephoneMask(value: string): string
 export declare function globalCellphoneMask(
   country: string,
   phoneNumber: string

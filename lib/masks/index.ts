@@ -69,7 +69,7 @@ export function brazilianZipcodeMask(value: string): string {
  * // Apply telephone mask to 9-digit number
  * console.log(telephoneMask('11987654321')); // '(11) 98765-4321'
  */
-export function brasilianTelephoneMask(value: string): string {
+export function brazilianTelephoneMask(value: string): string {
   value = value.replace(/\D/g, '')
 
   if (value.length <= 10) {

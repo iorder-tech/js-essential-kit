@@ -1,7 +1,7 @@
 import {
   cpfOrCnpjMask,
   brazilianZipcodeMask,
-  brasilianTelephoneMask,
+  brazilianTelephoneMask,
   globalCellphoneMask,
   clearMask,
 } from '../lib/masks'
@@ -27,12 +27,12 @@ describe('brazilianZipcodeMask', () => {
 
 describe('brasilianTelephoneMask', () => {
   test('should apply telephone mask to 8-digit number', () => {
-    const result = brasilianTelephoneMask('1123456789')
+    const result = brazilianTelephoneMask('1123456789')
     expect(result).toBe('(11) 2345-6789')
   })
 
   test('should apply telephone mask to 9-digit number', () => {
-    const result = brasilianTelephoneMask('11987654321')
+    const result = brazilianTelephoneMask('11987654321')
     expect(result).toBe('(11) 98765-4321')
   })
 })

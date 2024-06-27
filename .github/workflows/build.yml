@@ -1,0 +1,69 @@
+name: unit-tests
+on:
+  pull_request:
+    branches:
+      - 'dev*'
+      - 'releases/v*'
+  push:
+    branches:
+      - 'dev*'
+    tags-ignore:
+      - '*.*'
+jobs:
+  unit-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: '.nvmrc'
+          registry-url: 'https://registry.npmjs.org'
+
+      - name: Install Yarn
+        run: npm install -g yarn
+
+      - name: Install and Test
+        run: |
+          yarn install --frozen-lockfile
+          yarn lint:check
+          yarn lint:format:check
+          yarn test
+
+      - name: Uploade CodeCov Report
+        uses: codecov/codecov-action@v4
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: '.nvmrc'
+          registry-url: 'https://registry.npmjs.org'
+
+      - name: Install Yarn
+        run: npm install -g yarn
+
+      - name: Build lib
+        run: |
+          yarn install
+          yarn build
+
+      - name: Rebuild production node_modules
+        run: |
+          yarn install --production --frozen-lockfile
+          ls node_modules
+
+      - name: artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: dist
+          path: |
+            lib
+            node_modules
