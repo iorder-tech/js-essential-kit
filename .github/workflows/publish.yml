@@ -44,21 +44,26 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
-      # Verify the publication
-      - run: sleep 30 # Wait for 30 seconds for propagation
-      - run: npm view js-helper-kit versions
-
-      # Setup .npmrc file to publish to GitHub Packages
-      - uses: actions/setup-node@v4
-        with:
-          node-version-file: '.nvmrc'
-          registry-url: 'https://npm.pkg.github.com'
-          scope: '@julioamsousa'
-
-      - name: Authenticate with the GitHub Package Registry
-        run: echo "//npm.pkg.github.com:_authToken=${{ secrets.GIT_TOKEN }}" > ~/.npmrc
-
-      # Publish to GitHub Packages
-      - run: npm publish
+      # Create a new release on GitHub
+      - name: Create GitHub Release
+        id: create_release
+        uses: actions/create-release@v1
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.GIT_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GIT_TOKEN }}
+        with:
+          tag_name: ${{ github.event.inputs.version }}
+          release_name: Release ${{ github.event.inputs.version }}
+          body: 'Release notes for version ${{ github.event.inputs.version }}'
+          draft: false
+          prerelease: false
+
+      # Upload build artifacts to the release
+      - name: Upload Release Asset
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GIT_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ./path/to/your/build/artifact.zip
+          asset_name: artifact.zip
+          asset_content_type: application/zip
