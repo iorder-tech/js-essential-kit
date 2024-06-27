@@ -21,8 +21,6 @@ jobs:
 
       - name: Initialize CodeQL
         uses: github/codeql-action/init@v3
-        with:
-          languages: javascript
 
       - name: Autobuild
         uses: github/codeql-action/autobuild@v3
@@ -32,7 +30,14 @@ jobs:
         with:
           token: ${{ secrets.GIT_TOKEN }}
 
+      - name: List files in results directory
+        run: ls -R /home/runner/work
+
       - name: Upload coverage reports to Codecov
         uses: codecov/codecov-action@v4.0.1
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
+          files: ./results/javascript.sarif
+          flags: unittests
+          name: codeql-report
+          fail_ci_if_error: true
