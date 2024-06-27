@@ -1,4 +1,4 @@
-name: Update Major Version Tag
+name: update-major-version-tag
 
 on:
   push:

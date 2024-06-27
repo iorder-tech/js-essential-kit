@@ -1,4 +1,4 @@
-name: Deploy Production Dependencies and Code
+name: deploy-production-dependencies-and-code
 on:
   workflow_dispatch:
   push:
