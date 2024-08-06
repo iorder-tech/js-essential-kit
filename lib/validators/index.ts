@@ -107,8 +107,8 @@ export function brazilianCnpjValidator(value: string): boolean {
  * console.log(emailValidation('example@com')); // false
  */
 export const emailIsValid = (email: string): boolean => {
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
-  return emailRegex.test(email)
+  const emailRegex = /^[^\s@]{1,64}@[^\s@]{1,255}\.[A-Za-z]{2,24}$/
+  return emailRegex.test(email) && email.length <= 254
 }
 
 /**
