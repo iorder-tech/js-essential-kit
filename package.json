@@ -44,7 +44,7 @@
   ],
   "author": "Julio Augusto <julio@iorder.com.br>",
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^7.14.1",
+    "@typescript-eslint/eslint-plugin": "^8.0.1",
     "buffer": "^6.0.3",
     "diacritic": "^0.0.2"
   },
@@ -62,7 +62,7 @@
     "prettier": "^3.3.2",
     "ts-jest": "^29.1.5",
     "typescript": "^5.5.2",
-    "typescript-eslint": "^7.14.1"
+    "typescript-eslint": "^8.0.1"
   },
   "husky": {
     "hooks": {
