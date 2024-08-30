@@ -66,3 +66,6 @@ export declare function birthdateIs18Plus(
 export declare function passwordStrongValidator(
   password: string
 ): PasswordPayload
+
+// Diacritics
+export declare function clean(input: string): string

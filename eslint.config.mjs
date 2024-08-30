@@ -17,37 +17,6 @@ export default tseslint.config(
     },
     rules: {
       'jest/no-conditional-expect': 'off',
-      '@typescript-eslint/ban-types': [
-        'error',
-        {
-          types: {
-            Number: {
-              message: 'Use number instead',
-              fixWith: 'number',
-            },
-            String: {
-              message: 'Use string instead',
-              fixWith: 'string',
-            },
-            Boolean: {
-              message: 'Use boolean instead',
-              fixWith: 'boolean',
-            },
-            Object: {
-              message: 'Use object instead',
-              fixWith: 'object',
-            },
-            '{}': {
-              message: 'Use object instead',
-              fixWith: 'object',
-            },
-            Symbol: {
-              message: 'Use symbol instead',
-              fixWith: 'symbol',
-            },
-          },
-        },
-      ],
       '@typescript-eslint/array-type': ['error', { default: 'array' }],
       '@typescript-eslint/explicit-module-boundary-types': 'error',
       '@typescript-eslint/no-explicit-any': 'off',

@@ -5,6 +5,7 @@ export * from './masks'
 export * from './normalize'
 export * from './validators'
 export * from './others'
+export * from './diacritics'
 
 // Utils
 export * from './utils/brazilian-cities'

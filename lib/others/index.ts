@@ -1,5 +1,5 @@
 import { Buffer } from 'buffer'
-import * as diacritic from 'diacritic'
+import { clean } from '../diacritics'
 
 /**
  * Encodes a string to Base64.
@@ -106,7 +106,7 @@ export function generateRange(quantity: number): number[] {
  * console.log(createSlug('Olá Mundo!')); // 'ola-mundo'
  */
 export function createSlug(name: string): string {
-  let slug = diacritic.clean(name) // Remove diacritics
+  let slug = clean(name) // Remove diacritics
   slug = slug.toLowerCase() // Convert to lowercase
   slug = slug.replace(/[^\w\s-]/g, '') // Remove non-word characters except spaces and hyphens
   slug = slug.replace(/\s+/g, '-') // Replace spaces with hyphens
