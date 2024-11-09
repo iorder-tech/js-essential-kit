@@ -69,3 +69,7 @@ export declare function passwordStrongValidator(
 
 // Diacritics
 export declare function clean(input: string): string
+
+// Utils
+export declare function isEmpty(arr: any[]): boolean
+export declare function isNotEmpty(arr: any[]): boolean

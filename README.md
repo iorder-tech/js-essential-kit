@@ -9,6 +9,7 @@ Welcome to the Utility JavaScript Functions Library! This library provides a com
 - [Masks](#masks)
 - [Normalize](#normalize)
 - [Validators](#validators)
+- [Utils](#utils)
 - [Others](#others)
 
 ## Getting Started ✈️
@@ -161,6 +162,28 @@ normalizeName(' João da Silva ') // Ex: 'João Da Silva'
 import { arrayToStringWithQuotes } from 'js-essential-kit'
 
 arrayToStringWithQuotes(['apple', 'banana', 'cherry']) // Ex: '"apple", "banana", "cherry"'
+```
+
+## Utils
+
+### isEmpty
+
+- Checks if array is empty.
+
+```js
+import { isEmpty } from 'js-essential-kit'
+
+isEmpty([]) // Ex: true
+```
+
+### isNotEmpty
+
+- Checks if array is not empty.
+
+```js
+import { isNotEmpty } from 'js-essential-kit'
+
+isNotEmpty(['apple', 'banana', 'cherry']) // Ex: true
 ```
 
 ## Others
