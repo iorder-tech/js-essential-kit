@@ -3,8 +3,16 @@
     "target": "ES2020",
     "module": "commonjs",
     "outDir": "dist",
-    "types": ["jest"]
+    "types": [
+      "jest"
+    ]
   },
-  "include": ["lib/**/*", "__tests__/**/*.ts"],
-  "exclude": ["node_modules", "**/*.spec.ts"]
+  "include": [
+    "lib/**/*",
+    "__tests__/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "**/*.spec.ts"
+  ]
 }
