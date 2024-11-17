@@ -10,3 +10,4 @@ export * from './diacritics'
 // Utils
 export * from './utils/brazilian-cities'
 export * from './utils/countries'
+export * from './utils/arraysUtils'
